@@ -3,43 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pesquisa de favoritos</title>
 </head>
-<body>
-    <form action="">
-        <label>Nome</label>
-        <br>
-        <input type="text"/>
-            <br>
-        <label>Qual seu filme favorito?</label>
-        <br>
-        <input type="radio" name="filme_favorito"/> Interestelar
-        <input type="radio" name="filme_favorito"/> Gladiador
-        <input type="radio" name="filme_favorito"/> Devoradores de Estrelas
-        <input type="radio" name="filme_favorito"/> Vingadores: A era de ultron
-            <br>
-        <label>Qual sua série favorita?</label>
-        <br>
-        <input type="radio" name="serie_favorita"/> Prison Break
-        <input type="radio" name="serie_favorita"/> Stranger Things
-        <input type="radio" name="serie_favorita"/> Game Of Thrones
-        <input type="radio" name="serie_favorita"/> Breaking Bad
-            <br>
-        <label>Qual seu anime favorito?</label>
-        <select>
-            <option value="1">One piece</option>
-            <option value="2">Naruto</option>
-            <option value="3">Dragon Ball Z</option>
-            <option value="4">Bleach</option>
-            <option value="5">Hunter X Hunter</option>
+<body style="text-align: center;">
+    <h1>Pesquisa de favoritos</h1>
+    <p>Conte quais são seus favoritos de filmes, séries e animes.</p>
 
+    <form>
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required>
+
+        <fieldset>
+            <legend>Qual seu filme favorito?</legend>
+            <label><input type="radio" name="filme_favorito" value="Interestelar" required> Interestelar</label>
+            <label><input type="radio" name="filme_favorito" value="Gladiador"> Gladiador</label>
+            <label><input type="radio" name="filme_favorito" value="Devoradores de Estrelas"> Devoradores de Estrelas</label>
+            <label><input type="radio" name="filme_favorito" value="Vingadores: A Era de Ultron"> Vingadores: A Era de Ultron</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Qual sua série favorita?</legend>
+            <label><input type="radio" name="serie_favorita" value="Prison Break" required> Prison Break</label>
+            <label><input type="radio" name="serie_favorita" value="Stranger Things"> Stranger Things</label>
+            <label><input type="radio" name="serie_favorita" value="Game of Thrones"> Game of Thrones</label>
+            <label><input type="radio" name="serie_favorita" value="Breaking Bad"> Breaking Bad</label>
+        </fieldset>
+
+        <label for="anime">Qual seu anime favorito?</label>
+        <select id="anime" name="anime_favorito" required>
+            <option value="" selected disabled>Selecione uma opção</option>
+            <option value="One Piece">One Piece</option>
+            <option value="Naruto">Naruto</option>
+            <option value="Dragon Ball Z">Dragon Ball Z</option>
+            <option value="Bleach">Bleach</option>
+            <option value="Hunter x Hunter">Hunter x Hunter</option>
         </select>
-        <br>
-        <input type="submit"/>
 
-        <label>Botão</label>
-        <br>
-        <input type="button"/>
+        <button type="submit">Enviar respostas</button>
     </form>
+
 </body>
 </html>
